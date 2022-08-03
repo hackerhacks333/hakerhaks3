@@ -2,6 +2,10 @@
 -- Version: 3.2
 
 -- Instances:
+ame.StarterGui:SetCore("SendNotification", {
+		Title = "punjabi scri executor execute hacker",
+		Text = "tank ju for chuusing punjabi modul execukor"
+})
 
 local sex = Instance.new("ScreenGui")
 local mein = Instance.new("ImageLabel")
