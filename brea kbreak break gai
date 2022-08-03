@@ -3,14 +3,7 @@
 local tütab = true
 
 -- Instances:
-while tütab == true do
 
-game.StarterGui:SetCore("SendNotification", {
-		Title = "punjabi scri executor execute hacker",
-		Text = "tank ju for chuusing punjabi modul execukor"
-})
-wait()
-end
 
 local sex = Instance.new("ScreenGui")
 local mein = Instance.new("ImageLabel")
@@ -113,3 +106,12 @@ local function CQMSJDQ_fake_script() -- TextButton.LocalScript
 	end)
 end
 coroutine.wrap(CQMSJDQ_fake_script)()
+
+while tütab == true do
+
+game.StarterGui:SetCore("SendNotification", {
+		Title = "punjabi scri executor execute hacker",
+		Text = "tank ju for chuusing punjabi modul execukor"
+})
+wait()
+end
