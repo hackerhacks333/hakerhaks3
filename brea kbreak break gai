@@ -2,7 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-ame.StarterGui:SetCore("SendNotification", {
+game.StarterGui:SetCore("SendNotification", {
 		Title = "punjabi scri executor execute hacker",
 		Text = "tank ju for chuusing punjabi modul execukor"
 })
