@@ -1,0 +1,106 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local sex = Instance.new("ScreenGui")
+local mein = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+sex.Name = "sex"
+sex.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+sex.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+mein.Name = "mein"
+mein.Parent = sex
+mein.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mein.Position = UDim2.new(0.0836390331, 0, 0.325387359, 0)
+mein.Size = UDim2.new(0, 1110, 0, 390)
+mein.Image = "rbxassetid://30938707"
+
+TextButton.Parent = mein
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.296404988, 0, 0.45053634, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.LuckiestGuy
+TextButton.Text = "klik 5 dimes for fre sholder pik ant 100 jeilbrek"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UICorner.CornerRadius = UDim.new(0, 99)
+UICorner.Parent = mein
+
+TextLabel.Parent = mein
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0.455855846, 0, -0.189743593, 0)
+TextLabel.Size = UDim2.new(0, 23, 0, 47)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "haker gui jeil"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function CQMSJDQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while true do
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			while true do
+				Instance.new("Part", workspace)
+				wait()
+			end
+			wait()
+		end
+	end)
+end
+coroutine.wrap(CQMSJDQ_fake_script)()
