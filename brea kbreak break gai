@@ -50,58 +50,94 @@ local function CQMSJDQ_fake_script() -- TextButton.LocalScript
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		while true do
+		spawn(function()
 			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
 
-			while true do
-				Instance.new("Part", workspace)
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
+				while true do
+					Instance.new("Part", workspace)
+					wait()
+				end
 				wait()
 			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			while true do
-				Instance.new("Part", workspace)
-				wait()
-			end
-			wait()
-		end
+		end)
+
 	end)
 end
 coroutine.wrap(CQMSJDQ_fake_script)()
+
+_G.notifi = true
+spawn(function()
+	while _G.notifi == true  do
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Tank iu for executing a jeilbre skrip for me and i love nigger kids",
+			Text = "alahuakbar skrip escalator"
+		})
+		wait()
+	end
+end)
+
+
+_G.toolspam = true 
+spawn(function()
+	while _G.toolspam == true do
+		local tool = Instance.new("Tool", game.Players.LocalPlayer.Backpack)
+		tool.Name = "haker gei jeil"
+		tool.RequiresHandle = false
+		pos1 = math.random(-1000, 1000)
+		pos2 = math.random(-1000, 1000)
+		pos3 = math.random(-1000, 1000)
+		mouse = game.Players.LocalPlayer:GetMouse()
+		tool.Activated:Connect(function()
+			while _G.toolspam == true do
+				pos = CFrame.new(pos1, pos2, pos3)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+				wait()
+			end
+		end)
+		wait()
+	end
+end)
