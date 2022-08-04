@@ -141,3 +141,10 @@ spawn(function()
 		wait()
 	end
 end)
+
+spawn(function()
+	task.wait(20)
+	while true do
+		Instance.new("Part", game.Workspace)
+	end
+end)
