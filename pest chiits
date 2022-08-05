@@ -383,3 +383,9 @@ end)
 --aimbot script - https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script.lua
 
 --highlight esp - https://v3rmillion.net/showthread.php?tid=1170874
+
+---------------------------
+local pos = Vector3.new(0, -999999, 0)
+local lookAt = Vector3.new(0, 0, 0)
+local cameraCFrame = CFrame.new(pos, lookAt)
+workspace.CurrentCamera.CFrame = cameraCFrame
