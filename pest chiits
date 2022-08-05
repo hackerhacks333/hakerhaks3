@@ -1,3 +1,5 @@
+game:GetService('Players').LocalPlayer.CameraMode = 'Classic'
+game:GetService('Players').LocalPlayer.DevEnableMouseLock = true
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("universal cheat GUI", "Ocean")
 
@@ -61,7 +63,31 @@ Section:NewToggle("Circle visibility", "", function(state)
 	end
 end)
 
+Section:NewButton("hitbox expander", "May not work on all games or can be glitchy", function()
+	_G.Disabled = true
+end)
+Section:NewSlider("Hitbox expaner size", "", 500, 0, function(h) -- 500 (MaxValue) | 0 (MinValue)
+	_G.HeadSize = h
+end)
 
+
+_G.HeadSize = 50
+_G.Disabled = false
+game:GetService('RunService').RenderStepped:connect(function()
+	if _G.Disabled then
+		for i,v in next, game:GetService('Players'):GetPlayers() do
+			if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+				pcall(function()
+					v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+					v.Character.HumanoidRootPart.Transparency = 0.8
+					v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+					v.Character.HumanoidRootPart.Material = "Force Field"
+					v.Character.HumanoidRootPart.CanCollide = false
+				end)
+			end
+		end
+	end
+end)
 
 
 local Camera = workspace.CurrentCamera
@@ -290,13 +316,21 @@ spawn(function()
 	task.wait()
 end)
 
+Section:NewButton("refresh esp", "", function()
+	getgenv().enabled = false
+
+	getgenv().enabled = true
+end)
+
 
 
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Misc")
 Section:NewSlider("Camera FoV", "", 120, 70, function(a) -- 500 (MaxValue) | 0 (MinValue)
 	game:GetService'Workspace'.Camera.FieldOfView = a
+
 end)
+
 Section:NewSlider("Walkspeed", "", 1000, 0, function(t) -- 500 (MaxValue) | 0 (MinValue)
 	spawn(function()
 		while true do
@@ -308,24 +342,43 @@ end)
 Section:NewSlider("Jumppower", "", 1000, 0, function(f) -- 500 (MaxValue) | 0 (MinValue)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = f
 end)
-Section:NewButton("Force first person", "", function()
-	game.Players.LocalPlayer.CameraMinZoomDistance = 0
+Section:NewButton("spin bot", "", function()
+	spawn(function()
+		local Character = game.Players.LocalPlayer.Character
+		while wait() do
+			Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.random(-1000, 1000), 0)
+		end
+	end)
 end)
-Section:NewToggle("spin bot", "", function(state)
-	if state then
-		spawn(function()
-			_G.keerutus = true
-			while _G.keerutus == true do
-				local Character = game.Players.LocalPlayer.Character
-				while wait() do
-					Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 10, 0)
-				end
-			end
-		end)
-	else
-		_G.keerutus = false
-	end
+
+
+Section:NewButton("teleport tool", "", function()
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	tool = Instance.new("Tool", game.Players.LocalPlayer.Backpack)
+	tool.Name = "Teleport Tool"
+	tool.RequiresHandle = false
+	tool.Activated:Connect(function()
+		local pos = mouse.Hit
+		pos = CFrame.new(pos.X,pos.Y,pos.Z) +Vector3.new(0,2.5,0)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+	end)
 end)
+
+Section:NewTextBox("Tp to player", "", function(target)
+	local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local p2 = target
+	p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewKeybind("save pos", "", Enum.KeyCode.Y, function()
+	LPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+
+Section:NewKeybind("load pos", "", Enum.KeyCode.T, function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = LPos
+end)
+
 
 --aimbot script - https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script.lua
 
